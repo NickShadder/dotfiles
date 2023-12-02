@@ -1,3 +1,4 @@
 {{ if eq .chezmoi.os "linux" "darwin" -}}
+#!/bin/sh
 chsh -s $(which zsh)
 {{ end -}}
