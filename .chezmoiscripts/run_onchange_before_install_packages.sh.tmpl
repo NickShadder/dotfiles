@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/zsh
+install() {
+  type "$1" &> /dev/null || sudo apt install "$1" -y
+}
+install fail2ban
+install apt-listchanges
+install unattended-upgrades
+install bat
+install ripgrep
+install fzf
+install exa
+{{ end -}}
