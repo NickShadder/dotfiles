@@ -1,13 +1,16 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
-install() {
-  type "$1" &> /dev/null || sudo apt install "$1" -y
-}
-install fail2ban
-install apt-listchanges
-install unattended-upgrades
-install bat
-install ripgrep
-install fzf
-install exa
+__PACKAGES=(
+    fail2ban
+    apt-listchanges
+    unattended-upgrades
+    tmux
+    vim
+    htop
+    ripgrep
+    fzf
+    bat
+    exa
+)
+sudo apt install -y ${__PACKAGES[@]}
 {{ end -}}
