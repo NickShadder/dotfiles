@@ -1,4 +1,4 @@
 {{ if eq .chezmoi.os "linux" "darwin" -}}
-#!/bin/sh
+#!/bin/bash
 sudo chsh -s $(which zsh) $(whoami)
 {{ end -}}
