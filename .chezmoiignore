@@ -1,7 +1,12 @@
 README.md
 
+.oh-my-zsh/cache/**
+.zcompdump*
+.zsh_history
+
 {{- if and (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin") }}
-.zshrc
-.tmux.conf
 .config
+.editorconfig
+.p10k.zsh
+.zshrc
 {{- end }}
