@@ -1,18 +1,16 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
-__PACKAGES=(
-  apt-listchanges
-  bat
-  exa
-  fail2ban
-  fzf
-  git
-  htop
-  jq
-  ripgrep
-  tmux
-  unattended-upgrades
-  vim
-)
-sudo apt install -y ${__PACKAGES[@]}
+sudo apt install -y \
+  apt-listchanges \
+  bat \
+  exa \
+  fail2ban \
+  fzf \
+  git \
+  htop \
+  jq \
+  ripgrep \
+  tmux \
+  unattended-upgrades \
+  vim \
 {{ end -}}
