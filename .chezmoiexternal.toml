@@ -31,4 +31,8 @@
     exact = true
     stripComponents = 1
     include = ["*/*.zsh", "*/VERSION"]
+[".tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm"
+    refreshPeriod = "168h"
 {{ end -}}
