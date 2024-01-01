@@ -2,26 +2,26 @@
 alias -g G='| grep'
 alias -g L='| less' 
 
-# Setup bat if available
+{{ if lookPath "batcat" -}}
+# The bat pager is available!
 # https://github.com/sharkdp/bat
-if type batcat &> /dev/null
-then
-  alias bat='batcat'
-  alias -g B='| bat'
-  GLOBALIAS_FILTER_VALUES+=(bat)
-  export BAT_THEME='Dracula'
-  export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-fi
+alias bat='batcat'
+alias -g B='| bat'
+GLOBALIAS_FILTER_VALUES+=(bat)
+export BAT_THEME='Dracula'
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+{{ end -}}
 
-# Prefer eza over ls if available
+{{ if lookPath "exa" -}}
+# The exa file cataloger is available!
 # https://github.com/ogham/exa
-if type exa &> /dev/null
-then
-  alias ls='exa --icons --color-scale --group-directories-first'
-  alias ll='ls --all --long'
-  alias lls='ll --sort size'
-  alias llss='lls --reverse'
-  alias l='exa -1 --group-directories-first'
-  alias tree='exa --tree --icons'
-  GLOBALIAS_FILTER_VALUES+=(l lls llss tree)
-fi
+alias ls='exa --icons --color-scale --group-directories-first'
+alias ll='ls --all --long'
+alias lls='ll --sort size'
+alias llss='lls --reverse'
+alias l='exa -1 --group-directories-first'
+alias tree='exa --tree --icons'
+GLOBALIAS_FILTER_VALUES+=(lls llss tree)
+{{ else -}}
+alias ll='ls -lAh'
+{{ end -}}
