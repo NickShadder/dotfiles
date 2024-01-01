@@ -1,6 +1,7 @@
 README.md
 
 .oh-my-zsh/cache/**
+.oh-my-zsh/custom/themes/powerlevel10k/**/*.zwc
 .zcompdump*
 .zsh_history
 
