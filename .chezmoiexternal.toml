@@ -35,10 +35,4 @@
     type = "git-repo"
     url = "https://github.com/tmux-plugins/tpm"
     refreshPeriod = "168h"
-{{ if lookPath "batcat" -}}
-[".config/bat/themes"]
-    type= "file"
-    url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme"
-    refreshPeriod = "168h"
-{{ end -}}
 {{ end -}}
