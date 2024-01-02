@@ -13,4 +13,8 @@ sudo apt install -y \
   tmux \
   unattended-upgrades \
   vim \
+  xsel \
+{{ else if eq .chezmoi.os "darwin" -}}
+brew install \
+  reattach-to-user-namespace \
 {{ end -}}
