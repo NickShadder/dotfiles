@@ -10,7 +10,7 @@ alias -g B='| bat'
 GLOBALIAS_FILTER_VALUES+=(bat)
 export BAT_THEME='TwoDark'
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-{{ end }}
+{{ end -}}
 
 # File listings
 {{ if lookPath "exa" -}}
@@ -22,7 +22,7 @@ alias lls='ll --sort size'
 alias llss='lls --reverse'
 alias l='exa -1 --group-directories-first'
 alias tree='exa --tree --icons'
-GLOBALIAS_FILTER_VALUES+=(tree)
+GLOBALIAS_FILTER_VALUES+=(ls ll lls llss l tree)
 {{ else -}}
 # No fancy file cataloger available
 # Setting up basic aliases
@@ -30,5 +30,5 @@ alias l='ls -1'
 alias ll='ls -lAh'
 alias lls='ll -S'
 alias llss='lls -r'
-{{ end }}
 GLOBALIAS_FILTER_VALUES+=(l ll lls llss)
+{{ end }}
