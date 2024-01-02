@@ -5,6 +5,7 @@ sudo apt install -y \
   bat \
   exa \
   fail2ban \
+  fd-find \
   fzf \
   git \
   htop \
@@ -16,5 +17,6 @@ sudo apt install -y \
   xsel \
 {{ else if eq .chezmoi.os "darwin" -}}
 brew install \
+  fd \
   reattach-to-user-namespace \
 {{ end -}}

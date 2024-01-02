@@ -1,0 +1,4 @@
+{{ if and (eq .chezmoi.osRelease.id "debian") (lookPath "fdfind") -}}
+#!/bin/bash
+ln -s $(which fdfind) ~/.local/bin/fd
+{{ end -}}
