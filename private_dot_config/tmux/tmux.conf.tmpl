@@ -55,6 +55,11 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 # See https://github.com/catppuccin/tmux
 set -g @plugin 'catppuccin/tmux'
 source-file $HOME/.config/tmux/catppuccin.conf
+{{ if or (lookPath "notify-send") (lookPath "osascript") -}}
+# Enable monitoring of tmux panes
+# See https://github.com/rickstaa/tmux-notify
+set -g @plugin 'rickstaa/tmux-notify'
+{{ end -}}
 # Persist tmux sessions across computer restarts
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
