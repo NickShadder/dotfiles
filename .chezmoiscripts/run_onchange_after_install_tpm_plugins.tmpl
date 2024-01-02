@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "linux" "darwin" -}}
 #!/bin/bash
-# tmux.conf hash: {{ include "private_dot_config/tmux/tmux.conf" | sha256sum }}
+# tmux.conf hash: {{ include "private_dot_config/tmux/tmux.conf.tmpl" | sha256sum }}
 ~/.tmux/plugins/tpm/bin/clean_plugins
 ~/.tmux/plugins/tpm/bin/install_plugins
 ~/.tmux/plugins/tpm/bin/update_plugins all
