@@ -38,7 +38,7 @@ for file in $HOME/.config/zsh/aliases/*; do
   source "$file"
 done
 
-# FZF
+# Enable fzf
 {{ if eq .chezmoi.os "linux" -}}
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 {{ else if eq .chezmoi.os "darwin" -}}
