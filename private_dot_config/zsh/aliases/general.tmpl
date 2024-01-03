@@ -2,6 +2,12 @@
 alias -g G='| grep'
 alias -g L='| less' 
 
+{{ if lookPath "nvim" -}}
+# NeoVim is available!
+alias vim='nvim'
+alias v='vim'
+{{ end -}}
+
 {{ if lookPath "batcat" -}}
 # The bat pager is available!
 # https://github.com/sharkdp/bat
