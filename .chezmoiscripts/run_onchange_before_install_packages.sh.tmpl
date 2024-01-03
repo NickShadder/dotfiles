@@ -1,20 +1,21 @@
-{{ if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.os "linux" "darwin" -}}
 #!/bin/bash
-sudo apt install -y \
-  bat \
-  exa \
-  fail2ban \
-  fd-find \
-  fzf \
-  git \
-  htop \
-  jq \
-  ripgrep \
-  tmux \
-  vim \
-  xsel \
+nix-env --install --attr \
+  nixpkgs.bat \
+  nixpkgs.delta \
+  nixpkgs.eza \
+  nixpkgs.fail2ban \
+  nixpkgs.fd \
+  nixpkgs.fzf \
+  nixpkgs.git \
+  nixpkgs.htop \
+  nixpkgs.jq \
+  nixpkgs.neovim \
+  nixpkgs.ripgrep \
+  nixpkgs.tmux \
+{{ if eq .chezmoi.os "linux" -}}
+  nixpkgs.xsel \
 {{ else if eq .chezmoi.os "darwin" -}}
-brew install \
-  fd \
-  reattach-to-user-namespace \
+  nixpkgs.reattach-to-user-namespace \
+{{ end }}
 {{ end -}}
