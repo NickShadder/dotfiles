@@ -13,15 +13,15 @@ export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 {{ end -}}
 
 # File listings
-{{ if lookPath "exa" -}}
-# The exa file cataloger is available!
-# https://github.com/ogham/exa
-alias ls='exa --icons --color-scale --group-directories-first'
+{{ if lookPath "eza" -}}
+# The eza file cataloger is available!
+# https://github.com/eza-community/eza
+alias ls='eza --icons --color-scale --group-directories-first'
 alias ll='ls --all --long'
 alias lls='ll --sort size'
 alias llss='lls --reverse'
-alias l='exa -1 --group-directories-first'
-alias tree='exa --tree --icons'
+alias l='eza -1 --group-directories-first'
+alias tree='eza --tree --icons'
 GLOBALIAS_FILTER_VALUES+=(ls ll lls llss l tree)
 {{ else -}}
 # No fancy file cataloger available
