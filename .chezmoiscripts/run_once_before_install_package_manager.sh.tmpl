@@ -1,4 +1,5 @@
-{{ if and (eq .chezmoi.os "darwin") (not (lookPath "brew")) -}}
+{{ if and (eq .chezmoi.os "linux" "darwin") (not (lookPath "nix-env")) -}}
 #!/bin/bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sh <(curl -L https://nixos.org/nix/install) --no-modify-profile {{ if eq .chezmoi.os "linux" }} --no-daemon {{ end }}
+source $HOME/.nix-profile/etc/profile.d/nix.sh
 {{ end -}}
