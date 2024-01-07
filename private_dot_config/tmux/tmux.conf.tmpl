@@ -32,10 +32,9 @@ bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
-# Make highlighting work in tmux
-# https://github.com/zsh-users/zsh-autosuggestions/issues/229
-set -g default-terminal xterm-256color
+# Make colors correct for NeoVim
 # See https://github.com/omerxx/dotfiles/blob/master/tmux/tmux.conf
+set -g default-terminal screen-256color
 set-option -g terminal-overrides ',xterm-256color:RGB'
 
 # Use the system clipboard
