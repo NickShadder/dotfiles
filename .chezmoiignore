@@ -5,6 +5,8 @@ README.md
 .zcompdump*
 .zsh_history
 
+.config/nvim/lazy-lock.json
+
 {{- if and (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin") }}
 .config
 .editorconfig
