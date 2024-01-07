@@ -1,7 +1,8 @@
-return { "catppuccin/nvim", 
-	name = "catppuccin",
-	priority = 1000,
-	opt = {
+return {
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
+  opt = {
     integrations = {
       noice = true,
       which_key = true,

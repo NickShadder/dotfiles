@@ -11,7 +11,6 @@ local config = function()
   })
 end
 
-local keymap = vim.keymap
 return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",

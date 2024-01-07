@@ -16,6 +16,6 @@ return {
         -- Refer to https://youtu.be/ZjMzBd1Dqz8?t=4851
         background_colour = "#000000"
       })
-    end
-    }
+    end,
+  }
 }
