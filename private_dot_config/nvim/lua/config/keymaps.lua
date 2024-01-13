@@ -1,6 +1,10 @@
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 
+-- Set leader key to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Map command silently
 local maps = function(mode, key, command)
   vim.keymap.set(mode, key, command, { silent = true })
