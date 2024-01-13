@@ -1,6 +1,20 @@
 local config = function()
   require("nvim-treesitter.configs").setup {
-    ensure_installed = { "c", "cpp", "java", "kotlin", "lua", "python", "rust", "vimdoc", "vim", "bash" },
+    ensure_installed = {
+      "bash",
+      "c",
+      "cpp",
+      "java",
+      "json",
+      "kotlin",
+      "lua",
+      "markdown",
+      "python",
+      "rust",
+      "vim",
+      "vimdoc",
+      "yaml",
+    },
     auto_install = true,
     indent = {
       enable = true,
