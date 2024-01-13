@@ -12,10 +12,10 @@ return {
     --   If not available, we use `mini` as the fallback
     "rcarriga/nvim-notify",
     config = function()
-      require("notify").setup({
+      require("notify").setup {
         -- Refer to https://youtu.be/ZjMzBd1Dqz8?t=4851
         background_colour = "#000000"
-      })
+      }
     end,
   }
 }

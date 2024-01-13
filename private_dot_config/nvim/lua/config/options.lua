@@ -25,7 +25,7 @@ opt.completeopt = "menu,noinsert,noselect"
 
 -- Behavior
 opt.backspace = "indent,eol,start"
-opt.splitright =true
+opt.splitright = true
 opt.splitbelow = true
 opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")

@@ -11,7 +11,7 @@ local maps = function(mode, key, command)
 end
 
 -- Unmap space because it is the <leader> key
-maps({ 'n', 'v' }, '<Space>', '<nop>')
+maps({ "n", "v" }, "<Space>", "<nop>")
 
 -- Indentation
 maps("v", "<Tab>", ">gv")
