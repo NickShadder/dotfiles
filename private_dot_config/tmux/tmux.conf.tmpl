@@ -15,7 +15,7 @@ unbind %
 set -g mouse on
 
 # Don't rename windows automatically
-set-option -g allow-rename off
+set -g allow-rename off
 
 # Start windows at 1, not 0
 set -g base-index 1
@@ -35,7 +35,7 @@ bind -n M-Down select-pane -D
 # Make colors correct for NeoVim
 # See https://github.com/omerxx/dotfiles/blob/master/tmux/tmux.conf
 set -g default-terminal screen-256color
-set-option -g terminal-overrides ',xterm-256color:RGB'
+set -g terminal-overrides ',xterm-256color:RGB'
 
 # Use the system clipboard
 set -g set-clipboard on
