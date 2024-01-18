@@ -29,12 +29,6 @@ set -g renumber-windows on
 # Do not exit tmux when closing a session
 set -g detach-on-destroy off
 
-# Switch panes with Alt-arrow without using the prefix
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
-
 # Make colors correct for NeoVim
 # See https://github.com/omerxx/dotfiles/blob/master/tmux/tmux.conf
 set -g default-terminal screen-256color
@@ -58,6 +52,13 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 # See https://github.com/catppuccin/tmux
 set -g @plugin 'catppuccin/tmux'
 source-file $HOME/.config/tmux/catppuccin.conf
+
+# Navigate between vim and tmux seamlessly with Ctrl-hjkl bindings
+# Note: use Ctrl+Alt+L to clear the screen
+set -g @plugin 'christoomey/vim-tmux-navigator'
+# Alternatively use Prefix + Ctrl + L to clear the screen
+bind C-l send-keys 'C-l'
+
 {{ if or (lookPath "notify-send") (lookPath "osascript") -}}
 # Enable monitoring of tmux panes
 # See https://github.com/rickstaa/tmux-notify
