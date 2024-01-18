@@ -53,6 +53,7 @@ bind r source-file $HOME/.config/tmux/tmux.conf
 # See https://github.com/tmux-plugins/tpm
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
+
 # A nice theme for tmux
 # See https://github.com/catppuccin/tmux
 set -g @plugin 'catppuccin/tmux'
@@ -61,20 +62,21 @@ source-file $HOME/.config/tmux/catppuccin.conf
 # Enable monitoring of tmux panes
 # See https://github.com/rickstaa/tmux-notify
 set -g @plugin 'rickstaa/tmux-notify'
-{{ end -}}
+{{ end }}
 # Quickly find and select things
 # See https://github.com/tmux-plugins/tmux-copycat
 set -g @plugin 'tmux-plugins/tmux-copycat'
+
 {{ if or (eq .chezmoi.os "darwin") (and (eq .chezmoi.os "linux") (or (lookPath "xsel") (lookPath "xclip") (lookPath "wl-copy"))) -}}
 # Quickly yank things into the clipboard
 # See https://github.com/tmux-plugins/tmux-yank
 set -g @plugin 'tmux-plugins/tmux-yank'
-{{ end -}}
+{{ end }}
 {{ if or (eq .chezmoi.os "darwin") (and (eq .chezmoi.os "linux") (lookPath "xdg-open")) -}}
 # Quickly open selected files or URLs
 # See https://github.com/tmux-plugins/tmux-open
 set -g @plugin 'tmux-plugins/tmux-open'
-{{ end -}}
+{{ end }}
 # Persist tmux sessions across computer restarts
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
