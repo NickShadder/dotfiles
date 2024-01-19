@@ -2,6 +2,6 @@ return {
   "mbbill/undotree",
   lazy = false,
   keys = {
-    { "<C-u>", "<cmd>UndotreeToggle<cr>", silent = true },
+    { "<leader>u", "<cmd>UndotreeToggle<cr>", silent = true },
   },
 }

@@ -24,6 +24,10 @@ maps("v", "K", ":m '<-2<CR>gv=gv")
 -- Keep cursor in place when joining lines
 maps("n", "J", "mzJ`z")
 
+-- Fast vertical navigation and view centering
+maps("n", "<C-u>", "<C-u>zz")
+maps("n", "<C-d>", "<C-d>zz")
+
 -- Keep search terms in the middle
 maps("n", "n", "nzzzv")
 maps("n", "N", "Nzzzv")
