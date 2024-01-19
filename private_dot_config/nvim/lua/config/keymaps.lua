@@ -42,5 +42,9 @@ maps("n", "Q", "<nop>")
 -- Replace word under cursor
 maps("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Split windows
+maps("n", "<leader>-", "<cmd>split<cr>")
+maps("n", "<leader>|", "<cmd>vsplit<cr>")
+
 -- Autoformat
 vim.keymap.set("n", "C-A-l", vim.lsp.buf.format)
