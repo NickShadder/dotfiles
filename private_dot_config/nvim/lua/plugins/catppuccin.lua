@@ -2,7 +2,7 @@ return {
   "catppuccin/nvim",
   name = "catppuccin",
   priority = 1000,
-  opt = {
+  opts = {
     integrations = {
       noice = true,
       which_key = true,
