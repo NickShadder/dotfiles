@@ -1,5 +1,8 @@
-local config = function()
-  require("telescope").setup {
+return {
+  "nvim-telescope/telescope.nvim",
+  branch = "0.1.x",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  opts = {
     defaults = {
       mappings = {
         i = {
@@ -8,14 +11,7 @@ local config = function()
         },
       },
     },
-  }
-end
-
-return {
-  "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  config = config,
+  },
   keys = {
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "[F]ind [H]elp" },
     { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "[F]ind [F]iles" },
