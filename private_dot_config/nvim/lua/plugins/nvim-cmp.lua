@@ -11,6 +11,7 @@ local config = function()
   local cmp = require("cmp")
   local lspkind = require("lspkind")
   local devicons = require("nvim-web-devicons")
+  local autopairs = require("nvim-autopairs.completion.cmp")
 
   cmp.setup {
     snippet = {
@@ -107,6 +108,9 @@ local config = function()
       { name = "cmdline" }
     })
   })
+
+  -- If you want insert `(` after select function or method item
+  cmp.event:on("confirm_done", autopairs.on_confirm_done())
 end
 
 return {
@@ -119,6 +123,7 @@ return {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "onsails/lspkind-nvim",
+    "windwp/nvim-autopairs",
   },
   config = config,
 }
