@@ -4,6 +4,7 @@ return {
   priority = 1000,
   opts = {
     integrations = {
+      cmp = true,
       noice = true,
       which_key = true,
       treesitter = true,
