@@ -14,16 +14,18 @@ return {
     },
     { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
   },
-  opts = {
-    defaults = {
-      mappings = {
-        i = {
-          ["<C-j>"] = "move_selection_next",
-          ["<C-k>"] = "move_selection_previous",
+  config = function()
+    require("telescope").setup {
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-j>"] = "move_selection_next",
+            ["<C-k>"] = "move_selection_previous",
+          },
         },
       },
-    },
-  },
+    }
+  end,
   keys = {
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "[F]ind [H]elp" },
     { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "[F]ind [F]iles" },
