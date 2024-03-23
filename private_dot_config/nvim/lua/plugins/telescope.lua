@@ -12,6 +12,7 @@ return {
         return vim.fn.executable "make" == 1
       end,
     },
+    "nvim-telescope/telescope-ui-select.nvim",
     { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
   },
   config = function()
@@ -24,7 +25,15 @@ return {
           },
         },
       },
+      extensions = {
+        ["ui-select"] = {
+          require("telescope.themes").get_dropdown()
+        }
+      }
     }
+
+    pcall(require("telescope").load_extension, "fzf")
+    pcall(require("telescope").load_extension, "ui-select")
   end,
   keys = {
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "[F]ind [H]elp" },
