@@ -22,6 +22,8 @@ opt.colorcolumn = "100"
 opt.signcolumn = "yes"
 opt.scrolloff = 10
 opt.completeopt = "menu,noinsert,noselect"
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Behavior
 opt.backspace = "indent,eol,start"
