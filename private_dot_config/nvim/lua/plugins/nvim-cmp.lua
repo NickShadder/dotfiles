@@ -13,6 +13,8 @@ local config = function()
   local devicons = require("nvim-web-devicons")
   local autopairs = require("nvim-autopairs.completion.cmp")
 
+  require("luasnip.loaders.from_vscode").lazy_load()
+
   cmp.setup {
     snippet = {
       expand = function(args)
@@ -123,10 +125,15 @@ return {
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp",
-    "L3MON4D3/LuaSnip",
-    "saadparwaiz1/cmp_luasnip",
     "onsails/lspkind-nvim",
     "windwp/nvim-autopairs",
+    {
+      "rafamadriz/friendly-snippets",
+      dependencies = {
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
+      }
+    },
   },
   config = config,
 }
