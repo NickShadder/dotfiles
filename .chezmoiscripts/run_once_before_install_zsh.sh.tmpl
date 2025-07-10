@@ -1,7 +1,0 @@
-{{ if and (eq .chezmoi.os "linux") (not (lookPath "zsh")) -}}
-#!/bin/bash
-sudo apt install zsh -y
-{{ else if and (eq .chezmoi.os "darwin") (not (lookPath "zsh")) -}}
-#!/bin/bash
-brew install zsh
-{{ end -}}

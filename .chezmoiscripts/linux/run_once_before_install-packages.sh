@@ -1,6 +1,5 @@
-{{ if eq .chezmoi.osRelease.id "debian" -}}
 #!/bin/bash
 sudo apt install -y \
+  zsh \
   apt-listchanges \
   unattended-upgrades \
-{{ end -}}

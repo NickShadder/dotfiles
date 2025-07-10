@@ -7,6 +7,10 @@ README.md
 
 .config/nvim/lazy-lock.json
 
+.chezmoiscripts/**
+!.chezmoiscripts/common/**
+!.chezmoiscripts/{{- .chezmoi.os -}}/**
+
 {{- if and (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin") }}
 .config
 .editorconfig
