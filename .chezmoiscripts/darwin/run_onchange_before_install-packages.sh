@@ -1,5 +1,5 @@
 #!/bin/bash
-brew install \
+/opt/homebrew/bin/brew install \
   bat \
   eza \
   fail2ban \
