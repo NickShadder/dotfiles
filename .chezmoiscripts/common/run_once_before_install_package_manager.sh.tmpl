@@ -1,5 +1,0 @@
-{{ if and (eq .chezmoi.os "linux" "darwin") (not (lookPath "nix-env")) -}}
-#!/bin/bash
-sh <(curl -L https://nixos.org/nix/install) --no-modify-profile {{ if eq .chezmoi.os "linux" }} --no-daemon {{ end }}
-source $HOME/.nix-profile/etc/profile.d/nix.sh
-{{ end -}}

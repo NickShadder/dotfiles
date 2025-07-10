@@ -45,9 +45,12 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 {{ end }}
 
-{{ if eq .chezmoi.os "linux" "darwin" -}}
-# Enable nix package manager
-[[ ! -e $HOME/.nix-profile/etc/profile.d/nix.sh ]] || source $HOME/.nix-profile/etc/profile.d/nix.sh
+{{ if eq .chezmoi.os "linux" -}}
+# Enable homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{ else if eq .chezmoi.os "darwin" -}}
+# Enable homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ end }}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
