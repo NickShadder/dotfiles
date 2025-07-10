@@ -12,8 +12,12 @@ README.md
 !.chezmoiscripts/{{- .chezmoi.os -}}/**
 
 {{- if and (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin") }}
-.config
-.editorconfig
+.config/zsh
 .p10k.zsh
 .zshrc
+{{- end }}
+
+{{- if ne .chezmoi.os "windows" }}
+Documents
+.config/starship.toml
 {{- end }}
