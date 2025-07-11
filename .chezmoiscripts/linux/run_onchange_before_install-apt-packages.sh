@@ -5,6 +5,7 @@ sudo apt-get -q -y install \
   build-essential \
   curl \
   fail2ban \
+  fd-find \
   file \
   fzf \
   git \
