@@ -19,15 +19,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazyopts = {
-	install = {
+  install = {
     colorscheme = { "catppuccin" },
-	},
-	change_detection = {
+  },
+  change_detection = {
     notify = true, -- get a notification when changes are found
   },
-	performance = {
-	  rtp = {
-		  disabled_plugins = {
+  performance = {
+    rtp = {
+      disabled_plugins = {
         "gzip",
         "matchit",
         "matchparen",
@@ -38,7 +38,7 @@ local lazyopts = {
         "tutor",
         "zipPlugin",
       },
-	  },
+    },
   },
 }
 

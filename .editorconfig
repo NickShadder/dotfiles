@@ -13,3 +13,7 @@ end_of_line = crlf
 
 [Documents/**]
 end_of_line = crlf
+
+[private_dot_config/**.lua]
+indent_style = space
+indent_size = 2

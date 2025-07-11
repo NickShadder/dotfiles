@@ -46,7 +46,7 @@ local config = function()
       ["<C-k>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
       ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
       ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-      ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+      ["<C-y>"] = cmp.mapping.confirm({ select = true }),
       ["<C-e>"] = cmp.mapping {
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
@@ -87,8 +87,8 @@ local config = function()
     },
 
     sources = cmp.config.sources {
-      { name = 'nvim_lsp' },
-      { name = "luasnip" , keyword_length = 2},
+      { name = "nvim_lsp" },
+      { name = "luasnip", keyword_length = 2 },
       { name = "buffer", keyword_length = 3 },
       { name = "path" },
     },
