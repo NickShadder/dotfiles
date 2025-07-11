@@ -24,6 +24,7 @@ opt.scrolloff = 10
 opt.completeopt = "menu,noinsert,noselect"
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.diagnostic.config({ virtual_lines = true })
 
 -- Behavior
 opt.backspace = "indent,eol,start"
