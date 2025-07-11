@@ -1,5 +1,5 @@
 return {
   "j-hui/fidget.nvim",
-  tag = "v1.2.0",
-  lazy = false,
+  tag = "v1.6.1",
+  opts = {},
 }
