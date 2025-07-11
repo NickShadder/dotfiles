@@ -17,8 +17,11 @@ choco install `
     jetbrainsmono  `
     jq `
     less `
+    lua-language-server `
     neovim `
+    python3 `
     ripgrep `
+    ruff `
     starship `
     tree `
     wget

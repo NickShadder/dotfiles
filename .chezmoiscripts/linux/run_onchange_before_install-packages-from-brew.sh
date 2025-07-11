@@ -2,4 +2,7 @@
 /home/linuxbrew/.linuxbrew/bin/brew install \
   eza \
   git-delta \
-  neovim
+  lua-language-server \
+  neovim \
+  pipx \
+  ruff

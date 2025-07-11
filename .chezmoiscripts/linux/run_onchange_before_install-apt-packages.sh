@@ -5,6 +5,8 @@ sudo apt-get -q -y install \
   build-essential \
   curl \
   fail2ban \
+  python3 \
+  python3-pip \
   fd-find \
   file \
   fzf \
