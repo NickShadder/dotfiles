@@ -17,6 +17,7 @@
   ripgrep \
   ruff \
   tmux \
+  tree-sitter \
   zsh
 
-sudo pipx ensurepath --global
+pipx ensurepath

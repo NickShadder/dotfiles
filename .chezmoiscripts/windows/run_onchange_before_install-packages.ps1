@@ -24,4 +24,5 @@ choco install `
     ruff `
     starship `
     tree `
+    tree-sitter `
     wget

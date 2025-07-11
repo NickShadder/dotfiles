@@ -5,4 +5,5 @@
   lua-language-server \
   neovim \
   pipx \
-  ruff
+  ruff \
+  tree-sitter
