@@ -41,5 +41,6 @@ return {
     { "<leader>fw", "<cmd>Telescope grep_string<CR>", desc = "[F]ind [W]ord" },
     { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "[F]ind [G]rep" },
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "[F]ind [B]uffers" },
+    { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy find in this file" },
   },
 }
