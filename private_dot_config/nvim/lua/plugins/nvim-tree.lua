@@ -1,6 +1,6 @@
 return {
   "nvim-tree/nvim-tree.lua",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
   opts = {
     filters = {
       dotfiles = true,
