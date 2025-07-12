@@ -1,5 +1,11 @@
+function Invoke-Starship-TransientFunction {
+  &starship module character
+}
+
 # Start starship
 Invoke-Expression (&starship init powershell)
+
+Enable-TransientPrompt
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.

@@ -8,9 +8,6 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[private_dot_config/starship.toml]
-end_of_line = crlf
-
 [Documents/**]
 end_of_line = crlf
 

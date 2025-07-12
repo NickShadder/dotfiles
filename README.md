@@ -4,9 +4,7 @@ This is my attempt to organize my dotfiles using [chezmoi](https://www.chezmoi.i
 
 The dotfiles are mostly used to configure the following projects:
 - [Zsh](https://www.zsh.org/) as the user shell
-- [Oh My Zsh](https://ohmyz.sh/) as the shell framework on Mac and Linux
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k) as the theme for zsh
-- [Starship](https://starship.rs) as the powershell theme on Windows
+- [Starship](https://starship.rs) as the shell theme
 - [tmux](https://tmux.github.io/) for organizing terminal screen space
 - [NeoVim](https://neovim.io/) as the text editor
 
@@ -35,4 +33,3 @@ This is a short reference on how to work with this project.
 - [ ] Continue NeoVim setup
   - [ ] properly configure completion
   - [ ] configure snack.nvim
-- [ ] Consider moving to [Starship](https://starship.rs) on all systems

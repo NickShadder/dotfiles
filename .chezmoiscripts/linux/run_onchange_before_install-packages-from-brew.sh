@@ -6,4 +6,5 @@
   neovim \
   pipx \
   ruff \
+  starship \
   tree-sitter

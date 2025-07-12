@@ -16,6 +16,7 @@
   reattach-to-user-namespace \
   ripgrep \
   ruff \
+  starship \
   tmux \
   tree-sitter \
   zsh
