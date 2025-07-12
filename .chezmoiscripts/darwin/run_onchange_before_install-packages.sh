@@ -20,4 +20,3 @@
   tree-sitter \
   zsh
 
-pipx ensurepath
