@@ -12,6 +12,7 @@ choco install `
     delta `
     eza `
     fd `
+    fzf `
     git `
     gzip `
     jetbrainsmono  `
