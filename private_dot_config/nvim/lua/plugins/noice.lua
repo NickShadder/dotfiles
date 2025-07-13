@@ -1,6 +1,9 @@
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+  },
   opts = {
     lsp = {
       override = {
@@ -27,18 +30,10 @@ return {
     },
   },
   keys = {
-    { "<leader>nlm", function()
-      require("noice").cmd("last")
-    end, desc = "[N]oice [L]ast [M]essage" },
-    { "<leader>nh", function()
-      require("noice").cmd("history")
-    end, desc = "[N]oice [H]istory" },
-    { "<leader>na", function()
-      require("noice").cmd("all")
-    end, desc = "[N]oice [A]ll" },
-    { "<leader>nd", function()
-      require("noice").cmd("dismiss")
-    end, desc = "[N]oice [D]ismiss All" },
+    { "<leader>nlm", function() require("noice").cmd("last") end, desc = "[N]oice [L]ast [M]essage" },
+    { "<leader>nh", function() require("noice").cmd("history") end, desc = "[N]oice [H]istory" },
+    { "<leader>na", function() require("noice").cmd("all") end, desc = "[N]oice [A]ll" },
+    { "<leader>nd", function() require("noice").cmd("dismiss") end, desc = "[N]oice [D]ismiss All" },
     { "<c-f>", function()
       if not require("noice.lsp").scroll(4) then
         return "<c-f>"
@@ -49,9 +44,5 @@ return {
         return "<c-b>"
       end
     end, silent = true, expr = true, desc = "Scroll backward", mode = { "i", "n", "s" } },
-  },
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
   },
 }
