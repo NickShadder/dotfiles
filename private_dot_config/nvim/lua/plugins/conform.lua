@@ -15,10 +15,19 @@ return {
     end,
     formatters_by_ft = {
       lua = { "stylua" },
+      rust = { "rustfmt" },
+      -- Conform will run multiple formatters sequentially
       python = { "isort", "black" },
       go = { "goimports", "gofmt" },
-      -- You can use a sub-list to tell conform to run *until* a formatter is found.
-      -- javascript = { { "prettierd", "prettier" } },
+      -- You can customize some of the format options for the filetype (:help conform.format)
+      -- Conform will run the first available formatter
+      javascript = { "prettierd", "prettier", stop_after_first = true },
     },
   },
+  keys = {
+    { "<leader>cf", function()
+      require("conform").format({ lsp_format = "fallback" })
+    end, desc = "[C]ode [F]ormat",
+    },
+  }
 }
