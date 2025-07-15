@@ -2,6 +2,9 @@
 -- and https://youtu.be/FuYQ7M73bC0
 return {
   "nvim-treesitter/nvim-treesitter-textobjects",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+  },
   config = function()
     require("nvim-treesitter.configs").setup {
       textobjects = {
