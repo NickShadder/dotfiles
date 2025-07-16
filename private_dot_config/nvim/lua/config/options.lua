@@ -25,6 +25,7 @@ opt.completeopt = "menu,noinsert,noselect"
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.diagnostic.config({ virtual_lines = true })
+vim.g.have_nerd_font = true
 
 -- Behavior
 opt.backspace = "indent,eol,start"
